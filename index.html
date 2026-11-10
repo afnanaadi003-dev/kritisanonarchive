@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriti Sanon Archive: Cinematic Excellence & Visionary Stardom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amberGold: {
+                            100: '#fef3c7',
+                            300: '#fde047',
+                            400: '#eab308',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                            700: '#854d0e',
+                        },
+                        midnight: {
+                            950: '#060a14',
+                            900: '#0b1326',
+                            800: '#121e3a',
+                            700: '#1a2a50',
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        garamond: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #060a14;
+            color: #e2e8f0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060a14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
+        }
+
+        /* Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff3c7 0%, #d4af37 50%, #fde047 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(18, 30, 58, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 14px 35px -10px rgba(212, 175, 55, 0.25);
+        }
+
+        /* Hero Radial Glow */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.16) 0%, rgba(18, 30, 58, 0.4) 50%, rgba(6, 10, 20, 0.95) 90%);
+        }
+
+        /* Equalizer Audio Bar Animation */
+        .eq-bar {
+            width: 4px;
+            height: 12px;
+            background-color: #d4af37;
+            border-radius: 2px;
+            transition: height 0.15s ease;
+        }
+        .eq-active .eq-bar:nth-child(1) { animation: eqPulse 0.6s infinite alternate ease-in-out; }
+        .eq-active .eq-bar:nth-child(2) { animation: eqPulse 0.4s infinite alternate ease-in-out 0.1s; }
+        .eq-active .eq-bar:nth-child(3) { animation: eqPulse 0.7s infinite alternate ease-in-out 0.2s; }
+        .eq-active .eq-bar:nth-child(4) { animation: eqPulse 0.5s infinite alternate ease-in-out 0.15s; }
+
+        @keyframes eqPulse {
+            0% { height: 6px; }
+            100% { height: 26px; }
+        }
+
+        .modal-blur {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="selection:bg-amberGold-500 selection:text-black">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full z-40 glass-card bg-opacity-90 border-b border-amberGold-500/20 px-4 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-playfair text-xl md:text-2xl font-bold tracking-wider gold-gradient-text flex items-center gap-2">
+                <i class="fa-solid fa-crown text-amberGold-400 text-sm"></i> KRITI SANON ARCHIVE
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-300">
+                <a href="#biography" class="hover:text-amberGold-400 transition-colors">Biography</a>
+                <a href="#philosophy" class="hover:text-amberGold-400 transition-colors">Philosophy</a>
+                <a href="#filmography" class="hover:text-amberGold-400 transition-colors">Filmography</a>
+                <a href="#producer" class="hover:text-amberGold-400 transition-colors">Blue Butterfly</a>
+                <a href="#accolades" class="hover:text-amberGold-400 transition-colors">Accolades</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-amberGold-400 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="hidden lg:hidden flex-col gap-4 pt-4 pb-2 border-t border-amberGold-500/20 mt-3 text-sm">
+            <a href="#biography" class="mobile-link text-gray-300 hover:text-amberGold-400">Biography</a>
+            <a href="#philosophy" class="mobile-link text-gray-300 hover:text-amberGold-400">Philosophy</a>
+            <a href="#filmography" class="mobile-link text-gray-300 hover:text-amberGold-400">Filmography</a>
+            <a href="#producer" class="mobile-link text-gray-300 hover:text-amberGold-400">Blue Butterfly</a>
+            <a href="#accolades" class="mobile-link text-gray-300 hover:text-amberGold-400">Accolades</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen pt-28 pb-16 px-4 md:px-8 flex items-center justify-center hero-glow relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        
+        <div class="max-w-6xl mx-auto text-center z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full border border-amberGold-500/40 bg-amberGold-500/10 text-amberGold-300 text-xs tracking-widest uppercase font-semibold mb-6">
+                National Award Winner & Contemporary Cinema Icon
+            </span>
+            
+            <h1 class="font-playfair text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight mb-4 gold-gradient-text uppercase">
+                Visionary Grace & Cinematic Stardom
+            </h1>
+            
+            <p class="font-garamond italic text-xl sm:text-3xl text-amberGold-100/90 max-w-3xl mx-auto mb-10 font-medium leading-relaxed">
+                "From an engineering campus in Delhi to National Award-winning glory and producing fearless cinema."
+            </p>
+
+            <!-- Quick Stats & Profile Image Box -->
+            <div class="p-6 md:p-8 rounded-3xl glass-card max-w-4xl mx-auto mb-10 text-left border-amberGold-500/30 relative">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <!-- Profile Image Box -->
+                    <div class="md:col-span-5 relative group">
+                        <div class="w-full h-88 rounded-2xl overflow-hidden border border-amberGold-500/40 shadow-2xl relative bg-midnight-900">
+                            <!-- SVG Avatar Portrait Representation -->
+                            <div class="w-full h-full bg-gradient-to-b from-midnight-800 via-midnight-900 to-black flex flex-col items-center justify-center relative p-6">
+                                <div class="w-40 h-40 rounded-full border-2 border-amberGold-500/60 p-1.5 bg-amberGold-500/10 mb-4 flex items-center justify-center shadow-xl shadow-amberGold-500/20">
+                                    <svg class="w-32 h-32 text-amberGold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"></path>
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="3" fill="#d4af37" opacity="0.3"></circle>
+                                        <path d="M12 14c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z" fill="#d4af37" opacity="0.15"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-playfair text-2xl font-bold text-white tracking-wide">KRITI SANON</h3>
+                                    <span class="text-xs font-garamond italic text-amberGold-300 text-base">The Self-Made Sovereign</span>
+                                </div>
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-amberGold-500/20 text-amberGold-300 border border-amberGold-500/40 text-[10px] font-playfair font-bold">
+                                    NATIONAL AWARD WINNER
+                                </span>
+                            </div>
+                        </div>
+                        <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 text-center text-[10px] font-playfair bg-black/90 text-amberGold-300 py-1.5 px-4 rounded-full border border-amberGold-500/40 shadow-lg whitespace-nowrap">
+                            FOUNDER: BLUE BUTTERFLY FILMS
+                        </span>
+                    </div>
+
+                    <!-- Profile Information & Highlights Box -->
+                    <div class="md:col-span-7 space-y-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amberGold-400 text-sm"></i>
+                            <span class="font-playfair text-xs font-bold text-amberGold-400 tracking-wider uppercase">OUTSIDER SUPREMACY & VERSATILITY</span>
+                        </div>
+                        <h2 class="font-playfair text-2xl md:text-3xl font-bold text-white">Kriti Sanon</h2>
+                        <p class="text-xs md:text-sm text-gray-300 italic leading-relaxed font-garamond text-lg">
+                            "I didn't have film pedigree or industry lineage, but I had hunger, an engineering mind for discipline, and the guts to gain 15 kilos for a role when everyone warned me against it."
+                        </p>
+                        
+                        <!-- Quick Stats Grid -->
+                        <div class="grid grid-cols-3 gap-3 pt-3">
+                            <div class="p-3 rounded-xl bg-midnight-950/80 border border-amberGold-500/20 text-center">
+                                <span class="block font-playfair font-bold text-amberGold-300 text-lg md:text-xl">69th</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">National Award (Mimi)</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-midnight-950/80 border border-amberGold-500/20 text-center">
+                                <span class="block font-playfair font-bold text-amberGold-300 text-lg md:text-xl">10+ Yrs</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Industry Excellence</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-midnight-950/80 border border-amberGold-500/20 text-center">
+                                <span class="block font-playfair font-bold text-amberGold-300 text-lg md:text-xl">Producer</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Blue Butterfly Films</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#filmography" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amberGold-600 to-amberGold-400 text-black font-bold uppercase tracking-wider text-xs hover:shadow-lg hover:shadow-amberGold-500/30 transition-all transform hover:-translate-y-0.5">
+                    Explore Masterpiece Films
+                </a>
+                <a href="#philosophy" class="px-8 py-3.5 rounded-xl border border-amberGold-500/50 hover:border-amberGold-400 bg-black/40 text-amberGold-300 font-semibold uppercase tracking-wider text-xs transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-quote-left"></i> Core Philosophy & Audio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: BIOGRAPHY & JOURNEY TIMELINE -->
+    <section id="biography" class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold gold-gradient-text mb-3">Biography & Trajectory</h2>
+            <p class="text-sm text-amberGold-400/80 font-garamond italic text-lg">Engineering Precision Meets Pure Cinematic Emotion</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amberGold-500 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 glass-card p-6 md:p-8 rounded-2xl relative space-y-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-xl bg-amberGold-500/20 border border-amberGold-500/40 flex items-center justify-center text-amberGold-400">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-amberGold-300">The Outsider's Triumph</h3>
+                </div>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Born in New Delhi to a professor mother and chartered accountant father, Kriti Sanon earned her Bachelor of Technology (B.Tech) degree in Electronics and Telecommunication Engineering. Driven by artistic passion, she transitioned into modeling and made her screen debut in the Telugu psychological thriller <em>1: Nenokkadine</em> (2014).
+                </p>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Her Hindi debut in <em>Heropanti</em> earned her the Filmfare Award for Best Female Debut. However, it was her portrayal of the rebellious, small-town girl Bitti Mishra in <em>Bareilly Ki Barfi</em> (2017) that shifted industry perception, establishing her as an actress of immense depth and comedic charm.
+                </p>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    The defining zenith came with <em>Mimi</em> (2021), where Kriti gained 15 kilograms to portray an unwed surrogate mother. Her performance won her the 69th National Film Award for Best Actress. In 2023, she launched her production banner <strong>Blue Butterfly Films</strong>, producing and starring in the thriller <em>Do Patti</em>, while continuing to dominate the box office with commercial hits like <em>Crew</em> and <em>Teri Baaton Mein Aisa Ujha Jiya</em>.
+                </p>
+
+                <div class="p-4 rounded-xl bg-midnight-950/80 border border-amberGold-500/30 text-xs italic text-amberGold-200 font-garamond text-base">
+                    "Being an outsider gives you an edge—you don't come in with predefined expectations, and every single step forward is entirely your own victory."
+                </div>
+            </div>
+
+            <!-- Career Timeline -->
+            <div class="lg:col-span-5 glass-card p-6 md:p-8 rounded-2xl">
+                <h3 class="font-playfair text-xl font-bold text-amberGold-300 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-timeline text-amberGold-400"></i> Career Milestones
+                </h3>
+
+                <div class="space-y-6 relative border-l border-amberGold-500/30 pl-6 ml-2">
+                    <div class="relative">
+                        <div class="w-3 h-3 bg-amberGold-400 rounded-full absolute -left-[31px] top-1 border border-black"></div>
+                        <span class="text-xs font-playfair text-amberGold-400 font-bold">2014</span>
+                        <h4 class="text-sm font-bold text-white">Debut & Filmfare Recognition</h4>
+                        <p class="text-xs text-gray-300">Starred in <em>Heropanti</em>, winning the Filmfare Best Female Debut award.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="w-3 h-3 bg-amberGold-400 rounded-full absolute -left-[31px] top-1 border border-black"></div>
+                        <span class="text-xs font-playfair text-amberGold-400 font-bold">2017 - 2019</span>
+                        <h4 class="text-sm font-bold text-white">Critical Turning Point</h4>
+                        <p class="text-xs text-gray-300">Critical praise for <em>Bareilly Ki Barfi</em>, followed by blockbuster commercial hits <em>Luka Chuppi</em> and <em>Housefull 4</em>.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="w-3 h-3 bg-amberGold-400 rounded-full absolute -left-[31px] top-1 border border-black"></div>
+                        <span class="text-xs font-playfair text-amberGold-400 font-bold">2021 - 2023</span>
+                        <h4 class="text-sm font-bold text-white">National Film Award Glory</h4>
+                        <p class="text-xs text-gray-300">Won the 69th National Film Award for Best Actress for <em>Mimi</em>. Founded <strong>Blue Butterfly Films</strong>.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="w-3 h-3 bg-amberGold-400 rounded-full absolute -left-[31px] top-1 border border-black"></div>
+                        <span class="text-xs font-playfair text-amberGold-400 font-bold">2024 - Present</span>
+                        <h4 class="text-sm font-bold text-white">Box Office Dominance & Producer Era</h4>
+                        <p class="text-xs text-gray-300">Delivered hits <em>Crew</em>, <em>Teri Baaton Mein Aisa Ujha Jiya</em>, and released her maiden production <em>Do Patti</em>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PHILOSOPHY & SPEECH VOICE SIMULATOR -->
+    <section id="philosophy" class="py-20 px-4 md:px-8 bg-gradient-to-b from-transparent via-midnight-800/40 to-transparent border-y border-amberGold-500/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-playfair text-amberGold-400 tracking-widest uppercase">ARTISTIC MANIFESTO</span>
+                <h2 class="font-playfair text-3xl md:text-5xl font-bold gold-gradient-text mt-1 mb-3">Philosophy & Voice</h2>
+                <p class="text-sm text-amberGold-400/80 font-garamond italic text-lg">15 Core Reflections on Acting, Producing, Body Positivity & Singlehood</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amberGold-500 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl relative border-amberGold-500/40 min-h-[320px] flex flex-col justify-between" id="carousel-card">
+                <i class="fa-solid fa-quote-left text-amberGold-500/10 text-7xl absolute top-4 left-6 pointer-events-none"></i>
+
+                <div class="space-y-4 relative z-10">
+                    <div class="flex justify-between items-center">
+                        <span id="thought-category" class="px-3 py-1 rounded-full bg-amberGold-500/20 text-amberGold-300 text-[11px] font-playfair font-bold tracking-wider uppercase border border-amberGold-500/40"></span>
+                        <span id="thought-counter" class="text-xs font-playfair text-amberGold-400 font-bold"></span>
+                    </div>
+
+                    <blockquote id="thought-text" class="font-garamond text-2xl md:text-4xl text-amberGold-100 italic leading-relaxed pt-2">
+                        <!-- Dynamic Quote -->
+                    </blockquote>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-amberGold-500/20 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+                    <!-- Audio Player Controls & Equalizer -->
+                    <div class="flex items-center gap-3">
+                        <button id="tts-btn" class="px-5 py-2.5 rounded-full bg-amberGold-500/20 hover:bg-amberGold-500 text-amberGold-300 hover:text-black border border-amberGold-500/40 font-playfair text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-volume-high" id="tts-icon"></i> Listen Speech
+                        </button>
+
+                        <div id="eq-container" class="flex items-end gap-1 h-7 px-3 py-1 rounded-lg bg-midnight-950/80 border border-amberGold-500/30">
+                            <div class="eq-bar"></div>
+                            <div class="eq-bar"></div>
+                            <div class="eq-bar"></div>
+                            <div class="eq-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button id="prev-btn" class="w-10 h-10 rounded-full border border-amberGold-500/40 hover:border-amberGold-400 bg-black/40 text-amberGold-300 flex items-center justify-center hover:bg-amberGold-500 hover:text-black transition-all">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        
+                        <button id="autoplay-btn" class="px-4 py-2 rounded-full border border-amberGold-500/40 text-xs font-playfair font-bold text-amberGold-300 bg-black/40 hover:border-amberGold-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-pause" id="autoplay-icon"></i> Autoplay
+                        </button>
+
+                        <button id="next-btn" class="w-10 h-10 rounded-full border border-amberGold-500/40 hover:border-amberGold-400 bg-black/40 text-amberGold-300 flex items-center justify-center hover:bg-amberGold-500 hover:text-black transition-all">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full h-1.5 bg-midnight-900 rounded-full mt-4 overflow-hidden border border-amberGold-500/20">
+                <div id="progress-bar" class="h-full bg-gradient-to-r from-amberGold-600 via-amberGold-400 to-amberGold-300 w-0 transition-all duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: FEATURED FILMOGRAPHY & DETAIL MODALS -->
+    <section id="filmography" class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold gold-gradient-text mb-3">Featured Filmography</h2>
+            <p class="text-sm text-amberGold-400/80 font-garamond italic text-lg">National Award Breakthroughs, Sci-Fi Romance & Box Office Dominance</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amberGold-500 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="films-grid">
+            <!-- Dynamic JS render -->
+        </div>
+    </section>
+
+    <!-- FILM DETAILS MODAL -->
+    <div id="film-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-blur bg-black/85">
+        <div class="glass-card max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl border-amberGold-500/50 p-6 md:p-8 relative">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-amberGold-400 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-film-content">
+                <!-- Dynamically Populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: BLUE BUTTERFLY FILMS & PRODUCER ERA -->
+    <section id="producer" class="py-20 px-4 md:px-8 bg-gradient-to-b from-transparent via-midnight-800/30 to-transparent">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-5xl font-bold gold-gradient-text mb-3">Blue Butterfly Films</h2>
+                <p class="text-sm text-amberGold-400/80 font-garamond italic text-lg">Empowering Unfiltered Storytelling & Female Sovereignty</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amberGold-500 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Producer Vision -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl">
+                    <span class="text-xs font-playfair text-amberGold-400 tracking-widest uppercase">Production House Vision</span>
+                    <h3 class="font-playfair text-2xl font-bold text-white mt-1 mb-4">Taking the Driver's Seat</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                        Established in 2023, <strong>Blue Butterfly Films</strong> represents Kriti Sanon's transition from performer to producer. Fueled by a desire to bring gripping, performance-driven scripts to life without waiting for opportunities to come to her.
+                    </p>
+                    <ul class="space-y-2.5 text-xs text-gray-300 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-amberGold-400 text-xs"></i>
+                            <span><em>Do Patti</em> (2024) — Maiden production venture starring Kajol and Kriti in dual roles.</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-amberGold-400 text-xs"></i>
+                            <span>Focus on narrative-driven thrillers, complex female relationships, and fresh writer voices.</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-amberGold-400 text-xs"></i>
+                            <span>Creating sustainable opportunities for women in writing, directing, and production management.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Entrepreneurship & Fashion -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl">
+                    <span class="text-xs font-playfair text-amberGold-400 tracking-widest uppercase">Entrepreneurship & Style</span>
+                    <h3 class="font-playfair text-2xl font-bold text-white mt-1 mb-4">Hyphen Beauty & Ms. Taken</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                        Beyond cinema, Kriti is a serial entrepreneur. She co-founded <em>Hyphen</em>, a skincare brand prioritizing clean formulations, and her apparel brand <em>Ms. Taken</em>, catering to modern, independent young women.
+                    </p>
+                    <div class="p-4 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 text-xs text-amberGold-200 italic font-garamond text-base mb-4">
+                        "Starting Hyphen and Blue Butterfly Films came from the same impulse: taking charge of my own creative and business narrative."
+                    </div>
+                    <div class="flex items-center gap-3 text-xs font-playfair text-amberGold-400">
+                        <i class="fa-solid fa-gem"></i> Modern Business Icon & Entrepreneur
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ACCOLADES & TRIUMPHS MATRIX -->
+    <section id="accolades" class="py-20 px-4 md:px-8 max-w-7xl mx-auto border-t border-amberGold-500/20">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold gold-gradient-text mb-3">Accolades & Triumphs</h2>
+            <p class="text-sm text-amberGold-400/80 font-garamond italic text-lg">Honoring Critical Acclaim & Industry Milestones</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amberGold-500 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="awards-grid">
+            <!-- Dynamic Render -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-amberGold-500/20 py-12 px-4 text-center bg-midnight-950">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <p class="font-playfair text-xl font-bold gold-gradient-text tracking-widest">KRITI SANON ARCHIVE</p>
+            <p class="text-xs text-gray-400 font-garamond italic text-base max-w-xl mx-auto">
+                "Stardom is not defined by where you come from, but by the relentless discipline to make your work unforgettable."
+            </p>
+            <p class="text-[11px] text-gray-500 uppercase tracking-widest pt-4">
+                Dedicated Cinematic Archive &copy; 2026. Visionary Stardom.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- DATA STRUCTURES --- //
+
+        const thoughtsData = [
+            { id: 1, text: "Gaining 15 kilos for Mimi was terrifying because people said it would ruin my glam image, but true acting begins where vanity ends.", category: "Craft & Dedication" },
+            { id: 2, text: "As an outsider, you have to prove yourself three times more, but when you finally win, the victory is entirely uncompromised.", category: "Self-Made Stardom" },
+            { id: 3, text: "Blue Butterfly Films was born from a desire to tell stories without waiting for permission or validation from anyone else.", category: "Producing Vision" },
+            { id: 4, text: "Playing SIFRA in TBMAUJ required acting like an AI robot with absolute human warmth—it was the hardest balance I've ever attempted.", category: "Performance Challenges" },
+            { id: 5, text: "Being a single woman pursuing her ambition should be celebrated, not analyzed through societal timelines.", category: "Womanhood & Identity" },
+            { id: 6, text: "Comedy in Bareilly Ki Barfi and Crew taught me that timing is like engineering: precise, calculated, yet appearing totally effortless.", category: "Comedic Precision" },
+            { id: 7, text: "Winning the National Film Award felt like a quiet slap to every doubt I ever harbored in my early audition days.", category: "National Glory" },
+            { id: 8, text: "Body positivity isn't just a hashtag; it was living through weight gain and loss for a role while the world commented on my body.", category: "Body Autonomy" },
+            { id: 9, text: "Do Patti gave me the opportunity to play dual roles with contrasting moral compasses—it tested every fiber of my craft.", category: "Dual Performance" },
+            { id: 10, text: "My engineering degree gave me logical discipline, but cinema gave me a soul to express raw human emotions.", category: "Roots & Background" },
+            { id: 11, text: "Crew proved that three women leading a heist film can dominate the global box office without needing a male savior storyline.", category: "Female Box Office" },
+            { id: 12, text: "I don't look back at rejections as losses; they were simply scripts that weren't meant for my destiny.", category: "Resilience" },
+            { id: 13, text: "Skincare through Hyphen and storytelling through Blue Butterfly are both extensions of creating things that make people feel confident.", category: "Entrepreneurship" },
+            { id: 14, text: "Vulnerability on screen is not weakness—it is the ultimate act of courage an actor can gift to the audience.", category: "Vulnerability" },
+            { id: 15, text: "Keep your head down, do the work, and let your filmography answer every critic.", category: "Work Ethic" }
+        ];
+
+        const filmsData = [
+            {
+                id: 'mimi',
+                title: 'Mimi',
+                year: '2021',
+                director: 'Laxman Utekar',
+                language: 'Hindi',
+                role: 'Mimi Rathore',
+                coStar: 'Pankaj Tripathi',
+                rating: '9.8 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=MIMI+(National+Award+Winner)',
+                synopsis: 'An aspiring actress in a small Rajasthani town agrees to become a surrogate mother for an American couple for money. When the couple backs out mid-pregnancy, Mimi chooses to raise the child as a single mother.',
+                characterPhilosophy: 'Unyielding maternal courage, dignity in single motherhood, and transformation from ambition to selfless love.',
+                awards: '69th National Film Award for Best Actress, Filmfare Award for Best Actress',
+                behindCraft: 'Gained 15 kg in 2 months without a personal trainer to authentically portray the third trimester of pregnancy.'
+            },
+            {
+                id: 'crew',
+                title: 'Crew',
+                year: '2024',
+                director: 'Rajesh A Krishnan',
+                language: 'Hindi',
+                role: 'Divya Rana',
+                coStar: 'Tabu, Kareena Kapoor Khan',
+                rating: '9.5 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=CREW+(Divya+Rana)',
+                synopsis: 'Three hardworking airline flight attendants faced with a bankrupt airline accidentally stumble into a gold smuggling operation, leading to a hilarious and slick international heist.',
+                characterPhilosophy: 'Smart, sharp-witted young woman navigating corporate greed and female solidarity.',
+                awards: 'Global Box Office Blockbuster Recognition',
+                behindCraft: 'Flawlessly balanced high-energy comedic timing alongside cinema veterans Tabu and Kareena Kapoor.'
+            },
+            {
+                id: 'tbmauj',
+                title: 'Teri Baaton Mein Aisa Ujha Jiya',
+                year: '2024',
+                director: 'Amit Joshi & Aradhana Sah',
+                language: 'Hindi',
+                role: 'SIFRA (Super Intelligent Female Robot Automation)',
+                coStar: 'Shahid Kapoor',
+                rating: '9.3 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=TBMAUJ+(SIFRA)',
+                synopsis: 'A robotics engineer falls deeply in love with an exceptionally lifelike AI humanoid robot without realizing her true synthetic identity.',
+                characterPhilosophy: 'Exploring the boundaries of artificial intelligence, love, and human emotional attachment.',
+                awards: 'Box Office Hit & Critical Acclaim for Performance',
+                behindCraft: 'Executed mechanical posture, unblinking eye control, and subtle robotic micro-expressions while maintaining emotional charm.'
+            },
+            {
+                id: 'bareilly-ki-barfi',
+                title: 'Bareilly Ki Barfi',
+                year: '2017',
+                director: 'Ashwiny Iyer Tiwari',
+                language: 'Hindi',
+                role: 'Bitti Mishra',
+                coStar: 'Ayushmann Khurrana, Rajkummar Rao',
+                rating: '9.4 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=BAREILLY+KI+BARFI+(Bitti)',
+                synopsis: 'A free-spirited small-town girl in Bareilly breaks societal norms by breakdancing, smoking, and reading progressive literature, leading to a romantic comedy of errors.',
+                characterPhilosophy: 'Defiance of small-town female stereotypes with unapologetic authenticity and humor.',
+                awards: 'Filmfare Nomination for Best Film & Critical Praises',
+                behindCraft: 'Immersed herself in Uttar Pradesh dialects and local body language to shed her urban model persona.'
+            },
+            {
+                id: 'bhediya',
+                title: 'Bhediya',
+                year: '2022',
+                director: 'Amar Kaushik',
+                language: 'Hindi',
+                role: 'Dr. Anika Chattopadhyay',
+                coStar: 'Varun Dhawan',
+                rating: '9.0 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=BHEDIYA+(Dr.+Anika)',
+                synopsis: 'A creature comedy thriller set in Arunachal Pradesh. A road contractor gets bitten by a mythical wolf, while Dr. Anika holds a shocking secret about the forest\'s ancient protector.',
+                characterPhilosophy: 'Environmental protection wrapped in quirky, unexpected character turns.',
+                awards: 'Visual Effects & Ensemble Award Nominations',
+                behindCraft: 'Sported a distinctive short fringe hairstyle and mastered comic timing in supernatural sequences.'
+            },
+            {
+                id: 'do-patti',
+                title: 'Do Patti',
+                year: '2024',
+                director: 'Shashanka Chaturvedi',
+                language: 'Hindi',
+                role: 'Saumya & Shailee (Dual Role / Maiden Producer)',
+                coStar: 'Kajol, Shaheer Sheikh',
+                rating: '9.6 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=DO+PATTI+(Producer+%26+Dual+Role)',
+                synopsis: 'A high-stakes suspense thriller set in the misty hills of North India involving twin sisters with contrasting personalities caught in a web of deceit, domestic turmoil, and mystery.',
+                characterPhilosophy: 'Exposing psychological complexity, domestic survival, and sisterly conflict.',
+                awards: 'Maiden Production Milestone under Blue Butterfly Films',
+                behindCraft: 'Simultaneously managed production duties while delivering polar opposite twin characterizations.'
+            },
+            {
+                id: 'adipurush',
+                title: 'Adipurush',
+                year: '2023',
+                director: 'Om Raut',
+                language: 'Hindi / Telugu',
+                role: 'Janaki',
+                coStar: 'Prabhas',
+                rating: '8.8 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=ADIPURUSH+(Janaki)',
+                synopsis: 'A mythological cinematic epic based on the ancient Ramayana, depicting Janaki\'s steadfast devotion, purity, and grace during her captivity in Lanka.',
+                characterPhilosophy: 'Classical devotion, regal dignity, and spiritual poise under adversity.',
+                awards: 'Pan-Indian Mythological Showcase',
+                behindCraft: 'Maintained serene composure and intricate classical screen presence in massive green-screen environments.'
+            },
+            {
+                id: 'dilwale',
+                title: 'Dilwale',
+                year: '2015',
+                director: 'Rohit Shetty',
+                language: 'Hindi',
+                role: 'Ishita Dev Malik',
+                coStar: 'Varun Dhawan, Shah Rukh Khan, Kajol',
+                rating: '9.0 / 10',
+                image: 'https://placehold.co/600x400/0b1326/d4af37?text=DILWALE+(Ishita)',
+                synopsis: 'A high-octane romantic action comedy where young lovers Ishita and Veer attempt to reunite their estranged families with tumultuous pasts.',
+                characterPhilosophy: 'Vibrant youthfulness and modern romantic idealism.',
+                awards: 'Commercial Box Office Blockbuster worldwide',
+                behindCraft: 'Held her own alongside legendary star pairings Shah Rukh Khan and Kajol in high-scale musical numbers.'
+            }
+        ];
+
+        const awardsData = [
+            { year: '2023', title: '69th National Film Award', detail: 'Best Actress in a Leading Role for *Mimi*', icon: 'fa-trophy' },
+            { year: '2022', title: 'Filmfare Award', detail: 'Best Actress (Female) for *Mimi*', icon: 'fa-award' },
+            { year: '2015', title: 'Filmfare Award', detail: 'Best Female Debut for *Heropanti*', icon: 'fa-star' },
+            { year: '2023', title: 'IIFA & Guild Awards', detail: 'Best Actress Recognition for *Mimi* & Style Icon Honors', icon: 'fa-crown' }
+        ];
+
+        // --- STATE MANAGEMENT --- //
+        let currentThoughtIndex = 0;
+        let isAutoplay = true;
+        let autoplayInterval = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileNav();
+            initPhilosophySlider();
+            renderFilms();
+            renderAwards();
+        });
+
+        function initMobileNav() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            btn.addEventListener('click', () => {
+                drawer.classList.toggle('hidden');
+                drawer.classList.toggle('flex');
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => drawer.classList.add('hidden'));
+            });
+        }
+
+        function initPhilosophySlider() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const autoplayBtn = document.getElementById('autoplay-btn');
+            const autoplayIcon = document.getElementById('autoplay-icon');
+            const ttsBtn = document.getElementById('tts-btn');
+
+            prevBtn.addEventListener('click', () => {
+                currentThoughtIndex = (currentThoughtIndex - 1 + thoughtsData.length) % thoughtsData.length;
+                updateSliderDisplay();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentThoughtIndex = (currentThoughtIndex + 1) % thoughtsData.length;
+                updateSliderDisplay();
+            });
+
+            autoplayBtn.addEventListener('click', () => {
+                isAutoplay = !isAutoplay;
+                if (isAutoplay) {
+                    autoplayIcon.className = 'fa-solid fa-pause';
+                    startAutoplay();
+                } else {
+                    autoplayIcon.className = 'fa-solid fa-play';
+                    stopAutoplay();
+                }
+            });
+
+            ttsBtn.addEventListener('click', () => {
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                    const thought = thoughtsData[currentThoughtIndex];
+                    const utterance = new SpeechSynthesisUtterance(thought.text);
+                    utterance.rate = 0.92;
+                    
+                    const icon = document.getElementById('tts-icon');
+                    const eq = document.getElementById('eq-container');
+
+                    utterance.onstart = () => {
+                        icon.className = 'fa-solid fa-volume-high text-amberGold-300';
+                        eq.classList.add('eq-active');
+                    };
+                    utterance.onend = () => {
+                        icon.className = 'fa-solid fa-volume-high';
+                        eq.classList.remove('eq-active');
+                    };
+                    utterance.onerror = () => {
+                        icon.className = 'fa-solid fa-volume-high';
+                        eq.classList.remove('eq-active');
+                    };
+
+                    window.speechSynthesis.speak(utterance);
+                }
+            });
+
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayInterval = setInterval(() => {
+                    currentThoughtIndex = (currentThoughtIndex + 1) % thoughtsData.length;
+                    updateSliderDisplay();
+                }, 5500);
+            }
+
+            function stopAutoplay() {
+                if (autoplayInterval) clearInterval(autoplayInterval);
+            }
+
+            function updateSliderDisplay() {
+                const item = thoughtsData[currentThoughtIndex];
+                document.getElementById('thought-category').innerText = item.category;
+                document.getElementById('thought-counter').innerText = `${currentThoughtIndex + 1} / ${thoughtsData.length}`;
+                document.getElementById('thought-text').innerText = `“${item.text}”`;
+
+                const progressPct = ((currentThoughtIndex + 1) / thoughtsData.length) * 100;
+                document.getElementById('progress-bar').style.width = `${progressPct}%`;
+            }
+
+            updateSliderDisplay();
+            startAutoplay();
+        }
+
+        function renderFilms() {
+            const grid = document.getElementById('films-grid');
+            grid.innerHTML = filmsData.map(film => `
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group cursor-pointer" onclick="openFilmModal('${film.id}')">
+                    <div>
+                        <div class="relative overflow-hidden h-48 bg-black">
+                            <img src="${film.image}" alt="${film.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 border border-amberGold-500/40 text-[10px] font-playfair text-amberGold-300 uppercase tracking-widest">
+                                ${film.language}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-playfair font-bold text-lg text-white group-hover:text-amberGold-300 transition-colors">${film.title}</h3>
+                                <span class="text-xs font-semibold text-amberGold-400 font-playfair">${film.year}</span>
+                            </div>
+                            <p class="text-xs text-amberGold-300/90 mb-2 font-medium">Role: ${film.role}</p>
+                            <p class="text-xs text-gray-300 line-clamp-3 leading-relaxed mb-4">${film.synopsis}</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full py-2.5 rounded-xl border border-amberGold-500/30 group-hover:border-amberGold-400 bg-amberGold-500/10 group-hover:bg-amberGold-500 text-amberGold-300 group-hover:text-black font-playfair text-xs font-bold uppercase tracking-wider transition-all">
+                            View Character Details
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.openFilmModal = function(id) {
+            const film = filmsData.find(f => f.id === id);
+            if (!film) return;
+
+            const modalContent = document.getElementById('modal-film-content');
+            modalContent.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-6 items-start mb-6">
+                    <img src="${film.image}" alt="${film.title}" class="w-full md:w-5/12 h-56 object-cover rounded-2xl border border-amberGold-500/30">
+                    <div class="w-full md:w-7/12">
+                        <span class="px-3 py-1 rounded-full bg-amberGold-500/20 text-amberGold-300 text-[10px] font-playfair uppercase tracking-widest border border-amberGold-500/40">
+                            ${film.language} Feature Showcase
+                        </span>
+                        <h2 class="font-playfair text-3xl font-bold text-white mt-2">${film.title}</h2>
+                        <p class="text-xs text-amberGold-400 font-semibold mt-1">Director: ${film.director} (${film.year}) | Critical Rating: ${film.rating}</p>
+                        <p class="text-xs text-gray-300 mt-2"><strong>Character Role:</strong> ${film.role}</p>
+                        ${film.coStar ? `<p class="text-xs text-gray-400 mt-1"><strong>Co-Stars:</strong> ${film.coStar}</p>` : ''}
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-midnight-900/80 border border-amberGold-500/20">
+                        <h4 class="font-playfair text-xs text-amberGold-400 font-bold uppercase tracking-wider mb-1">Synopsis & Plot Arc</h4>
+                        <p class="text-xs md:text-sm text-gray-300 leading-relaxed">${film.synopsis}</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30">
+                        <h4 class="font-playfair text-xs text-amberGold-400 font-bold uppercase tracking-wider mb-1">Character Philosophy</h4>
+                        <p class="text-xs md:text-sm text-amberGold-100 italic leading-relaxed font-garamond text-base">"${film.characterPhilosophy}"</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3.5 rounded-xl bg-black/40 border border-amberGold-500/20">
+                            <span class="text-[10px] font-playfair text-amberGold-400 uppercase block font-bold">Awards & Acclaim</span>
+                            <span class="text-xs text-gray-200">${film.awards}</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-black/40 border border-amberGold-500/20">
+                            <span class="text-[10px] font-playfair text-amberGold-400 uppercase block font-bold">Behind-The-Scenes Craft</span>
+                            <span class="text-xs text-gray-300">${film.behindCraft}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('film-modal').classList.remove('hidden');
+        };
+
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+            document.getElementById('film-modal').classList.add('hidden');
+        });
+
+        document.getElementById('film-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'film-modal') {
+                document.getElementById('film-modal').classList.add('hidden');
+            }
+        });
+
+        function renderAwards() {
+            const container = document.getElementById('awards-grid');
+            container.innerHTML = awardsData.map(award => `
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-amberGold-500/20 border border-amberGold-500/40 flex-shrink-0 flex items-center justify-center text-amberGold-400">
+                        <i class="fa-solid ${award.icon}"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-playfair text-amberGold-400 font-bold block">${award.year}</span>
+                        <h4 class="font-playfair text-sm font-bold text-white">${award.title}</h4>
+                        <p class="text-xs text-gray-300 mt-1">${award.detail}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
